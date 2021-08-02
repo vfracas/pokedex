@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Nom</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pokemon of pokemons">
+      <td>{{pokemon.id}}</td>
+      <td>
+        {{pokemon.names[4]?.name}}
+      </td>
+      <td>
+        {{pokemon.description}}
+      </td>
+      <td>
+        <img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+ pokemon.id +'.png'" alt="">
+      </td>
+    </tr>
+  </tbody>
+</table>
